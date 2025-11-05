@@ -1,0 +1,12 @@
+load("//haskell:custom.bzl", "haskell_lib", "haskell_bin")
+
+haskell_lib(
+    name = "local2",
+    srcs = [
+        "Local2.hs",
+    ],
+    visibility = ["PUBLIC"],
+    deps = [
+        "//haskell:base",
+    ],
+)

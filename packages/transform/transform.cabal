@@ -1,0 +1,132 @@
+cabal-version: 2.0
+
+-- This file has been generated from package.yaml by hpack version 0.36.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           transform
+version:        0.1.0.0
+description:    See https://hackage.haskell.org/package/transform/docs/Transform.html
+license:        GPL-3
+build-type:     Simple
+
+library
+  exposed-modules:
+      Data
+      Parse
+      Paths
+      Process
+      Transform
+      Write
+  hs-source-dirs:
+      lib
+  default-extensions:
+      AllowAmbiguousTypes
+      ApplicativeDo
+      BlockArguments
+      DataKinds
+      DefaultSignatures
+      DeriveAnyClass
+      DerivingStrategies
+      DerivingVia
+      DisambiguateRecordFields
+      DuplicateRecordFields
+      FunctionalDependencies
+      GADTs
+      LambdaCase
+      LiberalTypeSynonyms
+      MonadComprehensions
+      MultiWayIf
+      NoFieldSelectors
+      OverloadedLabels
+      OverloadedLists
+      OverloadedRecordDot
+      OverloadedStrings
+      PackageImports
+      PartialTypeSignatures
+      PatternSynonyms
+      QuantifiedConstraints
+      QuasiQuotes
+      RecordWildCards
+      RecursiveDo
+      RoleAnnotations
+      TemplateHaskell
+      TypeFamilies
+      TypeFamilyDependencies
+      UndecidableInstances
+      UnicodeSyntax
+      ViewPatterns
+  ghc-options: -Wall -Widentities -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wredundant-constraints -Wunused-type-patterns -Wunused-packages
+  build-depends:
+      aeson
+    , base ==4.*
+    , bytestring
+    , containers
+    , directory
+    , directory-contents
+    , exon
+    , extra
+    , filepath
+    , filepattern
+    , incipit-base
+    , optparse-applicative
+    , path
+    , path-io
+    , text
+    , transformers
+  mixins:
+      base hiding (Prelude)
+    , incipit-base (IncipitBase as Prelude)
+    , incipit-base hiding (IncipitBase)
+  default-language: GHC2021
+
+executable transform
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  default-extensions:
+      AllowAmbiguousTypes
+      ApplicativeDo
+      BlockArguments
+      DataKinds
+      DefaultSignatures
+      DeriveAnyClass
+      DerivingStrategies
+      DerivingVia
+      DisambiguateRecordFields
+      DuplicateRecordFields
+      FunctionalDependencies
+      GADTs
+      LambdaCase
+      LiberalTypeSynonyms
+      MonadComprehensions
+      MultiWayIf
+      NoFieldSelectors
+      OverloadedLabels
+      OverloadedLists
+      OverloadedRecordDot
+      OverloadedStrings
+      PackageImports
+      PartialTypeSignatures
+      PatternSynonyms
+      QuantifiedConstraints
+      QuasiQuotes
+      RecordWildCards
+      RecursiveDo
+      RoleAnnotations
+      TemplateHaskell
+      TypeFamilies
+      TypeFamilyDependencies
+      UndecidableInstances
+      UnicodeSyntax
+      ViewPatterns
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Widentities -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wredundant-constraints -Wunused-type-patterns -Wunused-packages
+  build-depends:
+      base ==4.*
+    , incipit-base
+    , transform
+  mixins:
+      base hiding (Prelude)
+    , incipit-base (IncipitBase as Prelude)
+    , incipit-base hiding (IncipitBase)
+  default-language: GHC2021

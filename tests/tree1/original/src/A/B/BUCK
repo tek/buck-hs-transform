@@ -1,0 +1,19 @@
+load("//haskell:custom.bzl", "haskell_lib", "haskell_bin")
+
+haskell_lib(
+    name = "a-b",
+    srcs = glob(["*.hs"], exclude = ["D.hs"]),
+    visibility = ["PUBLIC"],
+    deps = [
+        "//haskell:base",
+    ],
+)
+
+haskell_lib(
+    name = "a-b-d",
+    srcs = ["D.hs", "//tests/tree1/original/src/A:file-e"],
+    visibility = ["PUBLIC"],
+    deps = [
+        "//haskell:base",
+    ],
+)

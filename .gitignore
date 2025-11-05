@@ -1,0 +1,7 @@
+/transform_in/
+/transformed/
+/hs_parser_test_out/
+/buck_parser_test_out/
+/tests/*/json/
+/tests/*/out/
+/tests/mwb/

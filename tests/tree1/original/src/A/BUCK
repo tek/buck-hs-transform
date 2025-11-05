@@ -1,0 +1,6 @@
+export_file(
+    name = "file-e",
+    src = "E.hs",
+    out = "A/E.hs",
+    visibility = ["PUBLIC"],
+)
